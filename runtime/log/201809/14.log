@@ -1,0 +1,1982 @@
+---------------------------------------------------------------
+[ 2018-09-14T15:04:20+08:00 ] 127.0.0.1 GET /
+[ info ] localhost/ [运行时间：0.162609s][吞吐率：6.15req/s] [内存消耗：3,153.10kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'home',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Home->index[ D:\phpStudy\PHPTutorial\WWW\application\index\controller\Home.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/index\view\home\index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'taotus',
+  4 => 'lunbo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003516s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.026331s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.003620s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.015431s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT ad1.id,brand_name,nick_name
+FROM brand AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM brand)-(SELECT MIN(id) FROM brand))+(SELECT MIN(id) FROM brand)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 7; [ RunTime:0.009507s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.013773s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'jigou' LIMIT 6 [ RunTime:0.000796s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'meinvdalei' LIMIT 6 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'diyufenbu' LIMIT 6 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'shencaitizheng' LIMIT 6 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'zhuozhuangleixing' LIMIT 6 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingchangjing' LIMIT 6 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'mingxingmote' LIMIT 6 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingleixing' LIMIT 6 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT ad1.id,title,update_time
+FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 20 [ RunTime:0.004751s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =985 [ RunTime:0.003147s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =986 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =987 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =988 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =989 [ RunTime:0.000610s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =990 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =991 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =992 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =993 [ RunTime:0.000613s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =994 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =995 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =996 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =997 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =998 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =999 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1000 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1001 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1002 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1003 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1004 [ RunTime:0.000270s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:04:30+08:00 ] 127.0.0.1 GET /index.php/admin
+[ info ] localhost/index.php/admin [运行时间：0.040650s][吞吐率：24.60req/s] [内存消耗：1,964.96kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:04:31+08:00 ] 127.0.0.1 GET /index.php/admin/account/login
+[ info ] localhost/index.php/admin/account/login [运行时间：0.063855s][吞吐率：15.66req/s] [内存消耗：1,953.91kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Account->login[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\account\login.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:04:39+08:00 ] 127.0.0.1 POST /index.php/admin/account/loginconfirm
+[ info ] localhost/index.php/admin/account/loginconfirm [运行时间：0.080450s][吞吐率：12.43req/s] [内存消耗：2,670.06kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'loginconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\admin\controller\Account->loginConfirm[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010880s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.026760s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000474s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:04:40+08:00 ] 127.0.0.1 GET /index.php/admin/account/login
+[ info ] localhost/index.php/admin/account/login [运行时间：0.042041s][吞吐率：23.79req/s] [内存消耗：1,839.80kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/loginconfirm',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Account->login[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\account\login.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:04:46+08:00 ] 127.0.0.1 POST /index.php/admin/account/loginconfirm
+[ info ] localhost/index.php/admin/account/loginconfirm [运行时间：0.070609s][吞吐率：14.16req/s] [内存消耗：2,670.06kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'loginconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '654321',
+)
+[ info ] [ RUN ] app\admin\controller\Account->loginConfirm[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010835s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.020249s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000452s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:04:47+08:00 ] 127.0.0.1 GET /index.php/admin/account/login
+[ info ] localhost/index.php/admin/account/login [运行时间：0.062076s][吞吐率：16.11req/s] [内存消耗：1,839.80kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/loginconfirm',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Account->login[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\account\login.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:05:25+08:00 ] 0.0.0.0 GET /index.php/admin/account/login
+[ info ] localhost/index.php/admin/account/login [运行时间：0.034180s][吞吐率：29.26req/s] [内存消耗：1,838.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Account->login[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\account\login.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:05:38+08:00 ] 0.0.0.0 POST /index.php/admin/account/loginconfirm
+[ info ] localhost/index.php/admin/account/loginconfirm [运行时间：0.065957s][吞吐率：15.16req/s] [内存消耗：2,667.60kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'loginconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '30',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\admin\controller\Account->loginConfirm[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001708s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.018193s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000537s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:05:39+08:00 ] 0.0.0.0 GET /index.php/admin/account/login
+[ info ] localhost/index.php/admin/account/login [运行时间：0.093722s][吞吐率：10.67req/s] [内存消耗：1,838.26kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/loginconfirm',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Account->login[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\account\login.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:06:39+08:00 ] 0.0.0.0 POST /index.php/admin/account/loginconfirm
+[ info ] localhost/index.php/admin/account/loginconfirm [运行时间：0.067797s][吞吐率：14.75req/s] [内存消耗：2,667.88kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'loginconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '31',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'hiliqi',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\admin\controller\Account->loginConfirm[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010615s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.014684s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'hiliqi' LIMIT 1 [ RunTime:0.000444s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:06:40+08:00 ] 0.0.0.0 GET /index.php/admin/account/login
+[ info ] localhost/index.php/admin/account/login [运行时间：0.065266s][吞吐率：15.32req/s] [内存消耗：1,838.26kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/loginconfirm',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Account->login[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\account\login.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:06:46+08:00 ] 0.0.0.0 POST /index.php/admin/account/loginconfirm
+[ info ] localhost/index.php/admin/account/loginconfirm [运行时间：0.069105s][吞吐率：14.47req/s] [内存消耗：2,667.88kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'loginconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '31',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'hiliqi',
+  'password' => '654321',
+)
+[ info ] [ RUN ] app\admin\controller\Account->loginConfirm[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011449s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.015066s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'hiliqi' LIMIT 1 [ RunTime:0.000483s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:06:47+08:00 ] 0.0.0.0 GET /index.php/admin/account/login
+[ info ] localhost/index.php/admin/account/login [运行时间：0.063812s][吞吐率：15.67req/s] [内存消耗：1,838.26kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/loginconfirm',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Account->login[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\account\login.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:06:52+08:00 ] 0.0.0.0 POST /index.php/admin/account/loginconfirm
+[ info ] localhost/index.php/admin/account/loginconfirm [运行时间：0.071167s][吞吐率：14.05req/s] [内存消耗：2,623.40kb] [文件加载：68]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'loginconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/account/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '33',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'hiliqi',
+  'password' => 'aiguo999',
+)
+[ info ] [ RUN ] app\admin\controller\Account->loginConfirm[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Account.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011388s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.015134s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'hiliqi' LIMIT 1 [ RunTime:0.000434s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:08:33+08:00 ] 0.0.0.0 GET /index.php/admin
+[ info ] localhost/index.php/admin [运行时间：0.082208s][吞吐率：12.16req/s] [内存消耗：2,822.56kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Site->index[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Site.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\site\index.html [ array (
+  0 => 'username',
+  1 => 'site',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011979s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.021102s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000522s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:08:36+08:00 ] 0.0.0.0 GET /index.php/admin/taotu/index
+[ info ] localhost/index.php/admin/taotu/index [运行时间：0.090565s][吞吐率：11.04req/s] [内存消耗：3,106.27kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->index[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\taotu\index.html [ array (
+  0 => 'username',
+  1 => 'taotus',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010054s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.026207s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000826s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000707s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:08:39+08:00 ] 0.0.0.0 GET /index.php/admin/taotu/add
+[ info ] localhost/index.php/admin/taotu/add [运行时间：0.039845s][吞吐率：25.10req/s] [内存消耗：1,990.52kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/taotu/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->add[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Taotu.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\taotu\add.html [ array (
+  0 => 'username',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:09:06+08:00 ] 0.0.0.0 POST /index.php/admin/taotu/addsave
+[ info ] localhost/index.php/admin/taotu/addsave [运行时间：0.320753s][吞吐率：3.12req/s] [内存消耗：2,861.20kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'addsave',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/taotu/add',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarylJuexkHnT6qXGgAa',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '140070',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'title' => '推女郎李丽莎喷血性感个人写真秀股沟',
+  'tags' => '丝袜|尤物|少妇|情趣|嫩模|内衣|翘臀|巨乳',
+  'source_url' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->addsave[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001006s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.017544s ]
+[ sql ] [ SQL ] INSERT INTO `taotu` (`title` , `tags` , `source_url` , `create_time` , `update_time`) VALUES ('推女郎李丽莎喷血性感个人写真秀股沟' , '丝袜|尤物|少妇|情趣|嫩模|内衣|翘臀|巨乳' , '' , '2018-09-14 15:09:06' , '2018-09-14 15:09:06') [ RunTime:0.002230s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.016208s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000482s ]
+[ xiongzhangpush_log ] {"success_realtime":1,"remain_realtime":9}
+---------------------------------------------------------------
+[ 2018-09-14T15:09:07+08:00 ] 0.0.0.0 GET /index.php/admin/taotu/index
+[ info ] localhost/index.php/admin/taotu/index [运行时间：0.092158s][吞吐率：10.85req/s] [内存消耗：2,856.37kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/taotu/addsave',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->index[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\taotu\index.html [ array (
+  0 => 'username',
+  1 => 'taotus',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011047s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.022230s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000526s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:09:14+08:00 ] 0.0.0.0 GET /index.php/
+[ info ] localhost/index.php/ [运行时间：0.030330s][吞吐率：32.97req/s] [内存消耗：1,552.02kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:09:19+08:00 ] 0.0.0.0 GET /index.php/index
+[ info ] localhost/index.php/index [运行时间：0.030776s][吞吐率：32.49req/s] [内存消耗：1,552.09kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:09:21+08:00 ] 0.0.0.0 GET /
+[ info ] localhost/ [运行时间：0.125376s][吞吐率：7.98req/s] [内存消耗：2,899.22kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'home',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Home->index[ D:\phpStudy\PHPTutorial\WWW\application\index\controller\Home.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/index\view\home\index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'taotus',
+  4 => 'lunbo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011838s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.016160s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.016107s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000374s ]
+[ sql ] [ SQL ] SELECT ad1.id,brand_name,nick_name
+FROM brand AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM brand)-(SELECT MIN(id) FROM brand))+(SELECT MIN(id) FROM brand)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 7; [ RunTime:0.003367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.014784s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'jigou' LIMIT 6 [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'meinvdalei' LIMIT 6 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'diyufenbu' LIMIT 6 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'shencaitizheng' LIMIT 6 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'zhuozhuangleixing' LIMIT 6 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingchangjing' LIMIT 6 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'mingxingmote' LIMIT 6 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingleixing' LIMIT 6 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT ad1.id,title,update_time
+FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 20 [ RunTime:0.003441s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1398 [ RunTime:0.001833s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1399 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1400 [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1401 [ RunTime:0.000374s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1402 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1403 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1404 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1405 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1406 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1407 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1408 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1409 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1410 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1411 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1412 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1413 [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1414 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1415 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1416 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1417 [ RunTime:0.000235s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:09:29+08:00 ] 0.0.0.0 GET /index.php/taotu/newest
+[ info ] localhost/index.php/taotu/newest [运行时间：0.199582s][吞吐率：5.01req/s] [内存消耗：5,993.30kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'taotu',
+    2 => 'newest',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Taotu->newest[ D:\phpStudy\PHPTutorial\WWW\application\index\controller\Taotu.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/index\view\taotu\newest.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'taotus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010983s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.014457s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000664s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.013686s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.013995s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 100 [ RunTime:0.001190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.013833s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2275 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2274 [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2273 [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2272 [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2271 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2270 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2269 [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2268 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2267 [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2266 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2265 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2264 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2263 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2262 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2261 [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2260 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2259 [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2258 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2257 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2256 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2255 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2254 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2253 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2252 [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2251 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2250 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2249 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2248 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2247 [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2246 [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2245 [ RunTime:0.000831s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2244 [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2243 [ RunTime:0.001066s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2242 [ RunTime:0.001133s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2241 [ RunTime:0.001231s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2240 [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2239 [ RunTime:0.000961s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2238 [ RunTime:0.001033s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2237 [ RunTime:0.000879s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2236 [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2235 [ RunTime:0.000729s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2234 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1837 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1835 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1830 [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1829 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1828 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1827 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1826 [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1825 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1824 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1823 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1821 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1820 [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1819 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1818 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1817 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1816 [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1815 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1814 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1813 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1812 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1811 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1810 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1809 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1808 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1807 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1806 [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1805 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1803 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1802 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1801 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1800 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1799 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1798 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1797 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1796 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1795 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1794 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1793 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1792 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1791 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1790 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1789 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1788 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1787 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1786 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1785 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1784 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1783 [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1782 [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1781 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1780 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1779 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1778 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1777 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1776 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1775 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1774 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1773 [ RunTime:0.000280s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:10:49+08:00 ] 0.0.0.0 GET /index.php/taotu/newest
+[ info ] localhost/index.php/taotu/newest [运行时间：0.222378s][吞吐率：4.50req/s] [内存消耗：5,581.13kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'taotu',
+    2 => 'newest',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Taotu->newest[ D:\phpStudy\PHPTutorial\WWW\application\index\controller\Taotu.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/index\view\taotu\newest.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'taotus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011840s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.015514s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000524s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.016015s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.016662s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 100 [ RunTime:0.001052s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.015071s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2275 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2274 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2273 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2272 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2271 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2270 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2269 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2268 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2267 [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2266 [ RunTime:0.000632s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2265 [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2264 [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2263 [ RunTime:0.000548s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2262 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2261 [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2260 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2259 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2258 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2257 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2256 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2255 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2254 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2253 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2252 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2251 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2250 [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2249 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2248 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2247 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2246 [ RunTime:0.000969s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2245 [ RunTime:0.001217s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2244 [ RunTime:0.000902s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2243 [ RunTime:0.000902s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2242 [ RunTime:0.000942s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2241 [ RunTime:0.000824s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2240 [ RunTime:0.000779s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2239 [ RunTime:0.000949s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2238 [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2237 [ RunTime:0.001027s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2236 [ RunTime:0.001088s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2235 [ RunTime:0.000817s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2234 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1837 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1835 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1830 [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1829 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1828 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1827 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1826 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1825 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1824 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1823 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1821 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1820 [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1819 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1818 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1817 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1816 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1815 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1814 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1813 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1812 [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1811 [ RunTime:0.000802s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1810 [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1809 [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1808 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1807 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1806 [ RunTime:0.000493s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1805 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1803 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1802 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1801 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1800 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1799 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1798 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1797 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1796 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1795 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1794 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1793 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1792 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1791 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1790 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1789 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1788 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1787 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1786 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1785 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1784 [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1783 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1782 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1781 [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1780 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1779 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1778 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1777 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1776 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1775 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1774 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1773 [ RunTime:0.000353s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:11:56+08:00 ] 0.0.0.0 GET /index.php/admin/taotu/add
+[ info ] localhost/index.php/admin/taotu/add [运行时间：0.048004s][吞吐率：20.83req/s] [内存消耗：1,864.81kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/taotu/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->add[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Taotu.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\taotu\add.html [ array (
+  0 => 'username',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:12:05+08:00 ] 0.0.0.0 POST /index.php/admin/taotu/addsave
+[ info ] localhost/index.php/admin/taotu/addsave [运行时间：0.316841s][吞吐率：3.16req/s] [内存消耗：2,861.14kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'addsave',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/taotu/add',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBWkiZnuiHisVIoPo',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '119156',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'title' => '性感厨娘李丽莎奶油遮胸火辣身材极致诱惑',
+  'tags' => '美媛馆|内衣|美胸|性感美女|尤物',
+  'source_url' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->addsave[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011276s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.014488s ]
+[ sql ] [ SQL ] INSERT INTO `taotu` (`title` , `tags` , `source_url` , `create_time` , `update_time`) VALUES ('性感厨娘李丽莎奶油遮胸火辣身材极致诱惑' , '美媛馆|内衣|美胸|性感美女|尤物' , '' , '2018-09-14 15:12:05' , '2018-09-14 15:12:05') [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.015705s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001051s ]
+[ xiongzhangpush_log ] {"success_realtime":1,"remain_realtime":8}
+---------------------------------------------------------------
+[ 2018-09-14T15:12:06+08:00 ] 0.0.0.0 GET /index.php/admin/taotu/index
+[ info ] localhost/index.php/admin/taotu/index [运行时间：0.123054s][吞吐率：8.13req/s] [内存消耗：2,856.37kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/taotu/addsave',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->index[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\taotu\index.html [ array (
+  0 => 'username',
+  1 => 'taotus',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011693s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.021392s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000537s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:12:17+08:00 ] 0.0.0.0 GET /index.php/index/taotu/newest
+[ info ] localhost/index.php/index/taotu/newest [运行时间：0.040911s][吞吐率：24.44req/s] [内存消耗：1,544.95kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:12:22+08:00 ] 0.0.0.0 GET /index.php/taotu/newest
+[ info ] localhost/index.php/taotu/newest [运行时间：0.193682s][吞吐率：5.16req/s] [内存消耗：5,572.45kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'taotu',
+    2 => 'newest',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Taotu->newest[ D:\phpStudy\PHPTutorial\WWW\application\index\controller\Taotu.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/index\view\taotu\newest.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'taotus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001639s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.015117s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.014008s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.014256s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 100 [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.014251s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2276 [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2275 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2274 [ RunTime:0.000577s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2273 [ RunTime:0.000720s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2272 [ RunTime:0.000742s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2271 [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2270 [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2269 [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2268 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2267 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2266 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2265 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2264 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2263 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2262 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2261 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2260 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2259 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2258 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2257 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2256 [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2255 [ RunTime:0.001272s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2254 [ RunTime:0.000627s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2253 [ RunTime:0.000647s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2252 [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2251 [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2250 [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2249 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2248 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2247 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2246 [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2245 [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2244 [ RunTime:0.000858s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2243 [ RunTime:0.000930s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2242 [ RunTime:0.001530s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2241 [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2240 [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2239 [ RunTime:0.000933s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2238 [ RunTime:0.000882s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2237 [ RunTime:0.000866s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2236 [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2235 [ RunTime:0.000791s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2234 [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1837 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1835 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1830 [ RunTime:0.000760s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1829 [ RunTime:0.000651s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1828 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1827 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1826 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1825 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1824 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1823 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1821 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1820 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1819 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1818 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1817 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1816 [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1815 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1814 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1813 [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1812 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1811 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1810 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1809 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1808 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1807 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1806 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1805 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1803 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1802 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1801 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1800 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1799 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1798 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1797 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1796 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1795 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1794 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1793 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1792 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1791 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1790 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1789 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1788 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1787 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1786 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1785 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1784 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1783 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1782 [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1781 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1780 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1779 [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1778 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1777 [ RunTime:0.000374s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1776 [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1775 [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1774 [ RunTime:0.000713s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:12:55+08:00 ] 0.0.0.0 GET /index.php/taotu/newest
+[ info ] localhost/index.php/taotu/newest [运行时间：0.215135s][吞吐率：4.65req/s] [内存消耗：5,572.45kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'taotu',
+    2 => 'newest',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Taotu->newest[ D:\phpStudy\PHPTutorial\WWW\application\index\controller\Taotu.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/index\view\taotu\newest.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'taotus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011216s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.015116s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.013984s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.014328s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 100 [ RunTime:0.001109s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.018045s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2276 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2275 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2274 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2273 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2272 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2271 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2270 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2269 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2268 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2267 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2266 [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2265 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2264 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2263 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2262 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2261 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2260 [ RunTime:0.001035s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2259 [ RunTime:0.000767s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2258 [ RunTime:0.000764s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2257 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2256 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2255 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2254 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2253 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2252 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2251 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2250 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2249 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2248 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2247 [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2246 [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2245 [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2244 [ RunTime:0.000840s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2243 [ RunTime:0.000982s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2242 [ RunTime:0.001846s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2241 [ RunTime:0.000941s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2240 [ RunTime:0.000816s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2239 [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2238 [ RunTime:0.000853s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2237 [ RunTime:0.000831s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2236 [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2235 [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2234 [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1837 [ RunTime:0.001188s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1835 [ RunTime:0.001087s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1830 [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1829 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1828 [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1827 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1826 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1825 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1824 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1823 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1821 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1820 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1819 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1818 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1817 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1816 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1815 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1814 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1813 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1812 [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1811 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1810 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1809 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1808 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1807 [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1806 [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1805 [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1803 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1802 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1801 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1800 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1799 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1798 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1797 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1796 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1795 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1794 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1793 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1792 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1791 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1790 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1789 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1788 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1787 [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1786 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1785 [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1784 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1783 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1782 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1781 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1780 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1779 [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1778 [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1777 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1776 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1775 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1774 [ RunTime:0.000530s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:17:09+08:00 ] 0.0.0.0 GET /index.php/admin/taotu/add
+[ info ] localhost/index.php/admin/taotu/add [运行时间：0.034347s][吞吐率：29.11req/s] [内存消耗：1,864.97kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/taotu/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->add[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Taotu.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\taotu\add.html [ array (
+  0 => 'username',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T15:17:18+08:00 ] 0.0.0.0 POST /index.php/admin/taotu/addsave
+[ info ] localhost/index.php/admin/taotu/addsave [运行时间：0.344972s][吞吐率：2.90req/s] [内存消耗：2,861.39kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'addsave',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/taotu/add',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBo7OsGgg17ynAEVs',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '113977',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'title' => '翻版李丽莎余冰妹妹大尺度空姐制服私房照',
+  'tags' => '女神|私房照|情趣|丁字裤|黑白|长发|美臀|巨乳|美胸|美腿|尤物|性感美女|李丽莎',
+  'source_url' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->addsave[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001488s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.024815s ]
+[ sql ] [ SQL ] INSERT INTO `taotu` (`title` , `tags` , `source_url` , `create_time` , `update_time`) VALUES ('翻版李丽莎余冰妹妹大尺度空姐制服私房照' , '女神|私房照|情趣|丁字裤|黑白|长发|美臀|巨乳|美胸|美腿|尤物|性感美女|李丽莎' , '' , '2018-09-14 15:17:18' , '2018-09-14 15:17:18') [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.019897s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000564s ]
+[ xiongzhangpush_log ] {"success_realtime":1,"remain_realtime":7}
+---------------------------------------------------------------
+[ 2018-09-14T15:17:19+08:00 ] 0.0.0.0 GET /index.php/admin/taotu/index
+[ info ] localhost/index.php/admin/taotu/index [运行时间：0.105168s][吞吐率：9.51req/s] [内存消耗：2,856.72kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.php/admin/taotu/addsave',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->index[ D:\phpStudy\PHPTutorial\WWW\application\admin\controller\Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/admin\view\taotu\index.html [ array (
+  0 => 'username',
+  1 => 'taotus',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000881s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.026281s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000512s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:17:23+08:00 ] 0.0.0.0 GET /index.php/taotu/newest
+[ info ] localhost/index.php/taotu/newest [运行时间：0.267175s][吞吐率：3.74req/s] [内存消耗：5,554.19kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'taotu',
+    2 => 'newest',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-331eb9b8=e3835180-363d-4242-9835-cdacabea29be; Phpstorm-57a5d119=58f271f1-c5b1-43e0-bbf1-ef46ef72f53d; pgv_pvi=8687738880; Hm_lvt_3155433929be1afd6cef849b9709d4d7=1529997621; Hm_lvt_6ab5164a94a60680c8fe07fe71124e09=1529746914,1529817036,1529996132,1530174441; UM_distinctid=16584702b0e1143-0f1c02d6a4bdbc-9393265-144000-16584702b10c64; CNZZDATA1273823521=1300168417-1535520178-%7C1536127682; Hm_lvt_bf805e52c032614d6cf1b7aab10dac82=1536129326; PHPSESSID=rhf04najud8bhgnlrgaoi4ibp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Taotu->newest[ D:\phpStudy\PHPTutorial\WWW\application\index\controller\Taotu.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW/application/index\view\taotu\newest.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'taotus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010823s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.039166s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.019724s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000580s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.020016s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 100 [ RunTime:0.001185s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.020282s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2277 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2276 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2275 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2274 [ RunTime:0.001452s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2273 [ RunTime:0.000899s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2272 [ RunTime:0.000915s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2271 [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2270 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2269 [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2268 [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2267 [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2266 [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2265 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2264 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2263 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2262 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2261 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2260 [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2259 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2258 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2257 [ RunTime:0.000914s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2256 [ RunTime:0.001136s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2255 [ RunTime:0.000841s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2254 [ RunTime:0.000857s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2253 [ RunTime:0.000744s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2252 [ RunTime:0.000718s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2251 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2250 [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2249 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2248 [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2247 [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2246 [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2245 [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2244 [ RunTime:0.000794s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2243 [ RunTime:0.002221s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2242 [ RunTime:0.001717s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2241 [ RunTime:0.001318s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2240 [ RunTime:0.000955s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2239 [ RunTime:0.000962s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2238 [ RunTime:0.000908s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2237 [ RunTime:0.000888s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2236 [ RunTime:0.001716s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2235 [ RunTime:0.001227s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 2234 [ RunTime:0.000705s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1837 [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1835 [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1830 [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1829 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1828 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1827 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1826 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1825 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1824 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1823 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1821 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1820 [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1819 [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1818 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1817 [ RunTime:0.000637s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1816 [ RunTime:0.000677s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1815 [ RunTime:0.001211s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1814 [ RunTime:0.000789s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1813 [ RunTime:0.000654s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1812 [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1811 [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1810 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1809 [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1808 [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1807 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1806 [ RunTime:0.000507s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1805 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1803 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1802 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1801 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1800 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1799 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1798 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1797 [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1796 [ RunTime:0.000634s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1795 [ RunTime:0.001122s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1794 [ RunTime:0.001272s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1793 [ RunTime:0.000672s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1792 [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1791 [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1790 [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1789 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1788 [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1787 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1786 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1785 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1784 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1783 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1782 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1781 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1780 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1779 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1778 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1777 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1776 [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1775 [ RunTime:0.000372s ]
