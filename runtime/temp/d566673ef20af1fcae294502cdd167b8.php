@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:65:"D:\phpStudy\PHPTutorial\WWW/application/admin\view\taotu\add.html";i:1529568469;s:64:"D:\phpStudy\PHPTutorial\WWW\application\admin\view\pub\head.html";i:1526714681;s:63:"D:\phpStudy\PHPTutorial\WWW\application\admin\view\pub\nav.html";i:1527490652;s:64:"D:\phpStudy\PHPTutorial\WWW\application\admin\view\pub\menu.html";i:1531496536;s:64:"D:\phpStudy\PHPTutorial\WWW\application\admin\view\pub\foot.html";i:1526714703;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"/Users/zhangxiang/Documents/51rosi/application/admin/view/site/index.html";i:1537185518;s:71:"/Users/zhangxiang/Documents/51rosi/application/admin/view/pub/head.html";i:1537185518;s:70:"/Users/zhangxiang/Documents/51rosi/application/admin/view/pub/nav.html";i:1537189988;s:71:"/Users/zhangxiang/Documents/51rosi/application/admin/view/pub/menu.html";i:1537185518;s:71:"/Users/zhangxiang/Documents/51rosi/application/admin/view/pub/foot.html";i:1537185518;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,6 +49,9 @@
         <!-- 其它功能-->
         <div class="am-fr tpl-header-navbar">
             <ul>
+                <li class="am-text-sm tpl-header-navbar-welcome">
+                    <a href="/admin/site/clear">清除缓存</a>
+                </li>
                 <!-- 欢迎语 -->
                 <li class="am-text-sm tpl-header-navbar-welcome">
                     <a href="javascript:;">欢迎你, <span><?php echo $username; ?></span> </a>
@@ -131,7 +134,7 @@
             <div class="row">
                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
                     <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span>
-                        添加套图
+                        网站设置
                         <small>brand edit</small>
                     </div>
                 </div>
@@ -140,45 +143,100 @@
 
         <div class="widget am-cf">
             <div class="widget-head am-cf">
-                <div class="widget-title am-fl">添加套图</div>
+                <div class="widget-title am-fl">网站设置</div>
             </div>
             <div class="widget-body am-fr">
-                <form action="<?php echo url('taotu/addsave'); ?>" enctype="multipart/form-data" method="post" class="am-form tpl-form-line-form">
+                <form action="<?php echo url('site/editsave'); ?>" method="post" class="am-form tpl-form-line-form">
                     <div class="am-form-group">
-                        <label class="am-u-sm-3 am-form-label">添加套图 <span
-                                class="tpl-form-line-small-title">title</span></label>
+                        <label class="am-u-sm-3 am-form-label">网站名称 <span
+                                class="tpl-form-line-small-title">site name</span></label>
                         <div class="am-u-sm-9">
-                            <input type="text" class="tpl-form-input" name="title" value="">
-                            <small>输入套图名称</small>
+                            <input type="text" class="tpl-form-input" name="site_name" value="<?php echo $site['site_name']; ?>">
+                            <small>输入网站名称</small>
                         </div>
                     </div>
 
                     <div class="am-form-group">
-                        <label class="am-u-sm-3 am-form-label">套图标签 <span
-                                class="tpl-form-line-small-title">tags</span></label>
+                        <label class="am-u-sm-3 am-form-label">pc网址 <span
+                                class="tpl-form-line-small-title">pc url</span></label>
                         <div class="am-u-sm-9">
-                            <input type="text" class="tpl-form-input" name="tags" value="">
-                            <small>输入套图标签，多个标签用|分隔</small>
+                            <input type="text" class="tpl-form-input" name="pc_url" value="<?php echo $site['pc_url']; ?>">
+                            <small>输入pc网址</small>
                         </div>
                     </div>
 
                     <div class="am-form-group">
-                        <label class="am-u-sm-3 am-form-label">套图来源 <span
-                                class="tpl-form-line-small-title">source url</span></label>
+                        <label class="am-u-sm-3 am-form-label">移动端网址 <span
+                                class="tpl-form-line-small-title">mobile url</span></label>
                         <div class="am-u-sm-9">
-                            <input type="text" class="tpl-form-input" name="source_url" value="">
-                            <small>输入套图来源，用于采集</small>
+                            <input type="text" class="tpl-form-input" name="m_url" value="<?php echo $site['m_url']; ?>">
+                            <small>输入移动端网址</small>
                         </div>
                     </div>
 
                     <div class="am-form-group">
-                        <label class="am-u-sm-3 am-form-label">缩略图 <span
-                                class="tpl-form-line-small-title">thumb image</span></label>
+                        <label  class="am-u-sm-3 am-form-label">pc logo <span
+                                class="tpl-form-line-small-title">pc logo</span></label>
                         <div class="am-u-sm-9">
-                            <input type="file" class="tpl-form-input" name="thumb" />
-                            <small>图片最大100kb，只支持jpg格式</small>
+                            <input type="text" class="tpl-form-input" name="pc_logo" value="<?php echo $site['pc_logo']; ?>">
+                            <small>pc logo地址</small>
                         </div>
                     </div>
+
+                    <div class="am-form-group">
+                        <label  class="am-u-sm-3 am-form-label">mobile logo <span
+                                class="tpl-form-line-small-title">mobile logo</span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" class="tpl-form-input" name="m_logo" value="<?php echo $site['m_logo']; ?>">
+                            <small>mobile logo地址</small>
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label  class="am-u-sm-3 am-form-label">网站标题 <span
+                                class="tpl-form-line-small-title">site title</span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" class="tpl-form-input" name="title" value="<?php echo $site['title']; ?>">
+                            <small>site title</small>
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label  class="am-u-sm-3 am-form-label">网站关键词 <span
+                                class="tpl-form-line-small-title">site keyword</span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" class="tpl-form-input" name="keyword" value="<?php echo $site['keyword']; ?>">
+                            <small>site keyword</small>
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label  class="am-u-sm-3 am-form-label">网站描述 <span
+                                class="tpl-form-line-small-title">site description</span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" class="tpl-form-input" name="description" value="<?php echo $site['description']; ?>">
+                            <small>site description</small>
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label  class="am-u-sm-3 am-form-label">联系邮箱 <span
+                                class="tpl-form-line-small-title">mobile logo</span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" class="tpl-form-input" name="email" value="<?php echo $site['email']; ?>">
+                            <small>email</small>
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label  class="am-u-sm-3 am-form-label">icp备案号 <span
+                                class="tpl-form-line-small-title">mobile logo</span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" class="tpl-form-input" name="m_logo" value="<?php echo $site['icp']; ?>">
+                            <small>icp</small>
+                        </div>
+                    </div>
+
 
                     <div class="am-form-group">
                         <div class="am-u-sm-9 am-u-sm-push-3">

@@ -10,9 +10,7 @@ class Brand extends Base
 {
     public function listall($cate='jigou')
     {
-        //$site = SiteModel::get(0);
-        $brands = BrandModel::where('cate','=',$cate)->select();
-        //$this->assign('site',$this->site);
+        $brands = BrandModel::where('cate','=',$cate)->cache(true)->select();
         $this->assign('brands', $brands);
         $this->assign('cate',$cate);
         $this->assign('cate_name',current($brands)->getCateDes());
@@ -25,16 +23,17 @@ class Brand extends Base
 
     public function index($id)
     {
-        //$site = SiteModel::get(0);
         $brand = BrandModel::get($id);
-        $brands = BrandModel::where('cate','=',$brand->cate)->select();//查出相同分类的所有套图
+        $brands = BrandModel::where('cate','=',$brand->cate)->cache(true)->select();//查出相同分类的所有套图
         if (isMobile()){
             $page = 'Mpage'; //选择分页设置
         }else{
             $page = 'Page2';
         }
         //查出tags里包含brand的cate_des的所有套图
-        $taotus = TaotuModel::where('tags','like',"%$brand->brand_name%")->paginate(15,false,[
+        $taotus = TaotuModel::where('tags','like',"%$brand->brand_name%")
+            ->cache(true)
+            ->paginate(15,false,[
             'query'=>request()->param(),
             'type'      => 'util\\'.$page,
             'var_page'  => 'page'
@@ -44,7 +43,6 @@ class Brand extends Base
         }
         $this->assign('brand', $brand);
         $this->assign('brands', $brands);
-        //$this->assign('site', $this->site);
         $this->assign('count', count($taotus));
         $this->assign('taotus', $taotus);
         if (isMobile()){
@@ -55,19 +53,19 @@ class Brand extends Base
     }
 
     public function newest(){
-        //$site = SiteModel::get(0);
         if (isMobile()){
             $page = 'Mpage'; //选择分页设置
         }else{
             $page = 'Page2';
         }
-        $brands = BrandModel::where('id','>',0)->paginate(10,false,[
+        $brands = BrandModel::where('id','>',0)
+            ->cache(true)
+            ->paginate(10,false,[
             'query'=>request()->param(),
             'type'      => 'util\\'.$page,
             'var_page'  => 'page'
         ]);
         $this->assign('brands',$brands);
-        //$this->assign('site', $this->site);
         if (isMobile()){
             return $this->fetch('mnewest');
         }else{

@@ -11,6 +11,7 @@ namespace app\admin\controller;
 use app\index\model\Site as SiteModel;
 use app\admin\model\Admin as AdminModel;
 use think\Request;
+use think\Env;
 
 class Site extends BaseAdmin
 {
@@ -94,6 +95,14 @@ class Site extends BaseAdmin
             $this->success('修改成功','admin','',1);
         }else{
             $this->error('修改失败');
+        }
+    }
+
+    public function clear(){
+        if (delete_dir_file(RUNTIME_PATH . 'cache/') && delete_dir_file(	RUNTIME_PATH . 'temp/')) {
+            $this->success('清除缓存成功');
+        } else {
+            $this->error('清除缓存失败');
         }
     }
 }

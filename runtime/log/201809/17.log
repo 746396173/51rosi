@@ -1,0 +1,3502 @@
+---------------------------------------------------------------
+[ 2018-09-17T20:16:40+08:00 ] 0.0.0.0 GET /
+[ info ] localhost/ [运行时间：0.174638s][吞吐率：5.73req/s] [内存消耗：2,922.52kb] [文件加载：47]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'home',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Home->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Home.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/home/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'taotus',
+  4 => 'lunbo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002416s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.009266s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.001180s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000735s ]
+[ sql ] [ SQL ] SELECT ad1.id,brand_name,nick_name
+FROM brand AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM brand)-(SELECT MIN(id) FROM brand))+(SELECT MIN(id) FROM brand)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 7; [ RunTime:0.008049s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'jigou' LIMIT 6 [ RunTime:0.001129s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'meinvdalei' LIMIT 6 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'diyufenbu' LIMIT 6 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'shencaitizheng' LIMIT 6 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'zhuozhuangleixing' LIMIT 6 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingchangjing' LIMIT 6 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'mingxingmote' LIMIT 6 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingleixing' LIMIT 6 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT ad1.id,title,update_time
+FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 20 [ RunTime:0.002160s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =958 [ RunTime:0.001242s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =959 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =960 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =961 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =962 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =963 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =964 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =965 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =966 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =967 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =968 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =969 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =970 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =971 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =972 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =973 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =974 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =975 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =976 [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =977 [ RunTime:0.000379s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:17:41+08:00 ] 0.0.0.0 GET /
+[ info ] localhost/ [运行时间：0.096469s][吞吐率：10.37req/s] [内存消耗：2,721.75kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'home',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Home->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Home.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/home/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'taotus',
+  4 => 'lunbo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000801s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001033s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.007186s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000810s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000759s ]
+[ sql ] [ SQL ] SELECT ad1.id,brand_name,nick_name
+FROM brand AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM brand)-(SELECT MIN(id) FROM brand))+(SELECT MIN(id) FROM brand)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 7; [ RunTime:0.001642s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000799s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'jigou' LIMIT 6 [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'meinvdalei' LIMIT 6 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'diyufenbu' LIMIT 6 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'shencaitizheng' LIMIT 6 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'zhuozhuangleixing' LIMIT 6 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingchangjing' LIMIT 6 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'mingxingmote' LIMIT 6 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingleixing' LIMIT 6 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT ad1.id,title,update_time
+FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 20 [ RunTime:0.001339s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1577 [ RunTime:0.000979s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1578 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1579 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1580 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1581 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1582 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1583 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1584 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1585 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1586 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1587 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1588 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1589 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1590 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1591 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1592 [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1593 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1594 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1595 [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1596 [ RunTime:0.000344s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:19:49+08:00 ] 0.0.0.0 GET /
+[ info ] localhost/ [运行时间：0.070800s][吞吐率：14.12req/s] [内存消耗：2,721.70kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'home',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Home->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Home.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/home/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'taotus',
+  4 => 'lunbo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000850s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001080s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000727s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT ad1.id,brand_name,nick_name
+FROM brand AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM brand)-(SELECT MIN(id) FROM brand))+(SELECT MIN(id) FROM brand)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 7; [ RunTime:0.001107s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000705s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'jigou' LIMIT 6 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'meinvdalei' LIMIT 6 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'diyufenbu' LIMIT 6 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'shencaitizheng' LIMIT 6 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'zhuozhuangleixing' LIMIT 6 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingchangjing' LIMIT 6 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'mingxingmote' LIMIT 6 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingleixing' LIMIT 6 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT ad1.id,title,update_time
+FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 20 [ RunTime:0.001130s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1688 [ RunTime:0.001088s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1689 [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1690 [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1691 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1692 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1693 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1694 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1695 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1696 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1697 [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1698 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1699 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1700 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1701 [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1702 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1703 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1704 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1705 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1706 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1707 [ RunTime:0.000303s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:20:59+08:00 ] 0.0.0.0 GET /taotu/1688
+[ info ] localhost/taotu/1688 [运行时间：0.150428s][吞吐率：6.65req/s] [内存消耗：2,827.55kb] [文件加载：53]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977',
+)
+[ info ] [ PARAM ] array (
+  '/taotu/1688' => '',
+  'id' => '1688',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Taotu->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Taotu.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/taotu/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brand',
+  3 => 'brands',
+  4 => 'photos',
+  5 => 'taotus',
+  6 => 'taotu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000980s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001103s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000857s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT ad1.id,title,update_time
+FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 9 [ RunTime:0.013027s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.000995s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` = 1688 LIMIT 1 [ RunTime:0.003361s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000922s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `brand_name` IN ('明星','紧身','杨幂') [ RunTime:0.001402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.000892s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `photo` WHERE  `taotu_id` = 1688 LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1688 LIMIT 0,1 [ RunTime:0.000465s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:30:01+08:00 ] 0.0.0.0 GET /brandlistall/mingxingmote
+[ info ] localhost/brandlistall/mingxingmote [运行时间：0.079186s][吞吐率：12.63req/s] [内存消耗：2,770.04kb] [文件加载：47]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'listall',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977',
+)
+[ info ] [ PARAM ] array (
+  '/brandlistall/mingxingmote' => '',
+  'cate' => 'mingxingmote',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Brand->listall[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Brand.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/brand/listall.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'cate',
+  4 => 'cate_name',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000853s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001155s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001316s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'mingxingmote' [ RunTime:0.000684s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:30:03+08:00 ] 0.0.0.0 GET /brand/70
+[ info ] localhost/brand/70 [运行时间：0.119520s][吞吐率：8.37req/s] [内存消耗：2,855.04kb] [文件加载：53]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/brandlistall/mingxingmote',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977',
+)
+[ info ] [ PARAM ] array (
+  '/brand/70' => '',
+  'id' => '70',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Brand.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/brand/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brand',
+  3 => 'brands',
+  4 => 'count',
+  5 => 'taotus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001090s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001142s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000949s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001029s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 70 LIMIT 1 [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'mingxingmote' [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.001320s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `tags` LIKE '%张优%' LIMIT 1 [ RunTime:0.006192s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `tags` LIKE '%张优%' LIMIT 0,15 [ RunTime:0.001653s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.001292s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 895 [ RunTime:0.001140s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:33:41+08:00 ] 0.0.0.0 GET /admin
+[ info ] localhost/admin [运行时间：0.039513s][吞吐率：25.31req/s] [内存消耗：1,512.54kb] [文件加载：37]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T20:33:42+08:00 ] 0.0.0.0 GET /admin/account/login
+[ info ] localhost/admin/account/login [运行时间：0.036875s][吞吐率：27.12req/s] [内存消耗：1,435.50kb] [文件加载：35]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/account/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Account->login[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Account.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/account/login.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T20:33:50+08:00 ] 0.0.0.0 POST /admin/account/loginconfirm
+[ info ] localhost/admin/account/loginconfirm [运行时间：0.056057s][吞吐率：17.84req/s] [内存消耗：2,405.07kb] [文件加载：42]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'account',
+    2 => 'loginconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '33',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/account/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/account/loginconfirm' => '',
+  'username' => 'hiliqi',
+  'password' => 'aiguo999',
+)
+[ info ] [ RUN ] app\admin\controller\Account->loginConfirm[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Account.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000813s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.000992s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'hiliqi' LIMIT 1 [ RunTime:0.000876s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:33:52+08:00 ] 0.0.0.0 GET /admin
+[ info ] localhost/admin [运行时间：0.052878s][吞吐率：18.91req/s] [内存消耗：2,636.17kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/account/loginconfirm',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Site->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Site.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/site/index.html [ array (
+  0 => 'username',
+  1 => 'site',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000556s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001036s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000517s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:33:53+08:00 ] 0.0.0.0 GET /admin/taotu/index
+[ info ] localhost/admin/taotu/index [运行时间：0.068204s][吞吐率：14.66req/s] [内存消耗：2,755.79kb] [文件加载：49]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/taotu/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/taotu/index.html [ array (
+  0 => 'username',
+  1 => 'taotus',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000722s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.000960s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.002277s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000523s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:33:55+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.067074s][吞吐率：14.91req/s] [内存消耗：2,590.74kb] [文件加载：51]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/taotu/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000793s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001046s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000469s ]
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/zhangxiang/Documents/51rosi/thinkphp/library/think/db/Query.php:2493]
+---------------------------------------------------------------
+[ 2018-09-17T20:34:23+08:00 ] 0.0.0.0 GET /admin/taotu/index
+[ info ] localhost/admin/taotu/index [运行时间：0.051389s][吞吐率：19.46req/s] [内存消耗：2,595.46kb] [文件加载：47]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/taotu/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/taotu/index.html [ array (
+  0 => 'username',
+  1 => 'taotus',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000662s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.001079s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000812s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000632s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:34:26+08:00 ] 0.0.0.0 GET /admin/taotu/index
+[ info ] localhost/admin/taotu/index [运行时间：0.047166s][吞吐率：21.20req/s] [内存消耗：2,595.51kb] [文件加载：47]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/taotu/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/taotu/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/taotu/index.html [ array (
+  0 => 'username',
+  1 => 'taotus',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000709s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.000868s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000565s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:34:28+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.045491s][吞吐率：21.98req/s] [内存消耗：2,497.04kb] [文件加载：49]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/taotu/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/zhangxiang/Documents/51rosi/thinkphp/library/think/db/Query.php:2493]
+---------------------------------------------------------------
+[ 2018-09-17T20:34:44+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.060116s][吞吐率：16.63req/s] [内存消耗：2,785.89kb] [文件加载：49]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/taotu/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000816s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001144s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000627s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:34:59+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.056967s][吞吐率：17.55req/s] [内存消耗：2,693.18kb] [文件加载：50]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/taotu/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000815s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001042s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000693s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:35:00+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.044830s][吞吐率：22.31req/s] [内存消耗：2,594.21kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/taotu/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T20:35:55+08:00 ] 0.0.0.0 GET /admin/brand/edit?id=108
+[ info ] localhost/admin/brand/edit?id=108 [运行时间：0.058329s][吞吐率：17.14req/s] [内存消耗：2,655.72kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/edit' => '',
+  'id' => '108',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->edit[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/edit.html [ array (
+  0 => 'username',
+  1 => 'brand',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000815s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001044s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000624s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:35:59+08:00 ] 0.0.0.0 POST /admin/brand/editsave
+[ info ] localhost/admin/brand/editsave [运行时间：0.055857s][吞吐率：17.90req/s] [内存消耗：2,622.86kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'editsave',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '1763',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryomAesDEQ95onEXM7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/edit?id=108',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/editsave' => '',
+  'id' => '108',
+  'brand_name' => '菠萝社111',
+  'nick_name' => 'boluoshe',
+  'brand_des' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+  'cate' => 'jigou',
+  'cate_des' => '品牌大全',
+  'title' => '菠萝社',
+  'keyword' => '',
+  'description' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->editsave[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000679s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000561s ]
+[ error ] [0]method not exist:think\db\Query->save[/Users/zhangxiang/Documents/51rosi/thinkphp/library/think/db/Query.php:96]
+---------------------------------------------------------------
+[ 2018-09-17T20:36:08+08:00 ] 0.0.0.0 GET /admin/brand/edit?id=108
+[ info ] localhost/admin/brand/edit?id=108 [运行时间：0.046429s][吞吐率：21.54req/s] [内存消耗：2,502.61kb] [文件加载：43]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/edit' => '',
+  'id' => '108',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->edit[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/edit.html [ array (
+  0 => 'username',
+  1 => 'brand',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000712s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000942s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000544s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:36:17+08:00 ] 0.0.0.0 POST /admin/brand/editsave
+[ info ] localhost/admin/brand/editsave [运行时间：0.050045s][吞吐率：19.98req/s] [内存消耗：2,622.86kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'editsave',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '1763',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary8XKSDdyOar0sixJA',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/edit?id=108',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/editsave' => '',
+  'id' => '108',
+  'brand_name' => '菠萝社111',
+  'nick_name' => 'boluoshe',
+  'brand_des' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+  'cate' => 'jigou',
+  'cate_des' => '品牌大全',
+  'title' => '菠萝社',
+  'keyword' => '',
+  'description' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->editsave[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000660s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000688s ]
+[ error ] [0]method not exist:think\db\Query->save[/Users/zhangxiang/Documents/51rosi/thinkphp/library/think/db/Query.php:96]
+---------------------------------------------------------------
+[ 2018-09-17T20:36:19+08:00 ] 0.0.0.0 GET /admin/brand/edit?id=108
+[ info ] localhost/admin/brand/edit?id=108 [运行时间：0.046386s][吞吐率：21.56req/s] [内存消耗：2,502.61kb] [文件加载：43]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/edit' => '',
+  'id' => '108',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->edit[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/edit.html [ array (
+  0 => 'username',
+  1 => 'brand',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000702s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000934s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000593s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:36:23+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.043327s][吞吐率：23.08req/s] [内存消耗：2,593.88kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/edit?id=108',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T20:36:25+08:00 ] 0.0.0.0 GET /admin/brand/edit?id=108
+[ info ] localhost/admin/brand/edit?id=108 [运行时间：0.045531s][吞吐率：21.96req/s] [内存消耗：2,502.61kb] [文件加载：43]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/edit' => '',
+  'id' => '108',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->edit[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/edit.html [ array (
+  0 => 'username',
+  1 => 'brand',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000770s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000982s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000650s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:36:28+08:00 ] 0.0.0.0 POST /admin/brand/editsave
+[ info ] localhost/admin/brand/editsave [运行时间：0.051922s][吞吐率：19.26req/s] [内存消耗：2,622.86kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'editsave',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '1763',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarym7clbxBz5mpPVIq1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/edit?id=108',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/editsave' => '',
+  'id' => '108',
+  'brand_name' => '菠萝社111',
+  'nick_name' => 'boluoshe',
+  'brand_des' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+  'cate' => 'jigou',
+  'cate_des' => '品牌大全',
+  'title' => '菠萝社',
+  'keyword' => '',
+  'description' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->editsave[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000681s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000773s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000513s ]
+[ error ] [0]method not exist:think\db\Query->save[/Users/zhangxiang/Documents/51rosi/thinkphp/library/think/db/Query.php:96]
+---------------------------------------------------------------
+[ 2018-09-17T20:37:06+08:00 ] 0.0.0.0 GET /admin/brand/edit?id=108
+[ info ] localhost/admin/brand/edit?id=108 [运行时间：0.045701s][吞吐率：21.88req/s] [内存消耗：2,502.61kb] [文件加载：43]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/edit' => '',
+  'id' => '108',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->edit[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/edit.html [ array (
+  0 => 'username',
+  1 => 'brand',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000650s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000741s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000514s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:37:10+08:00 ] 0.0.0.0 POST /admin/brand/editsave
+[ info ] localhost/admin/brand/editsave [运行时间：0.061371s][吞吐率：16.29req/s] [内存消耗：2,662.95kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'editsave',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '1763',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryw3lb08AHkda9OJ7P',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/edit?id=108',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/editsave' => '',
+  'id' => '108',
+  'brand_name' => '菠萝社111',
+  'nick_name' => 'boluoshe',
+  'brand_des' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+  'cate' => 'jigou',
+  'cate_des' => '品牌大全',
+  'title' => '菠萝社',
+  'keyword' => '',
+  'description' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->editsave[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000721s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000916s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] UPDATE `brand`  SET `brand_name`='菠萝社111',`update_time`='2018-09-17 20:37:10'  WHERE  `id` = 108 [ RunTime:0.002249s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:37:11+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.044915s][吞吐率：22.26req/s] [内存消耗：2,593.84kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/editsave',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T20:37:14+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.042802s][吞吐率：23.36req/s] [内存消耗：2,593.84kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T20:37:16+08:00 ] 0.0.0.0 GET /admin/brand/edit?id=108
+[ info ] localhost/admin/brand/edit?id=108 [运行时间：0.048143s][吞吐率：20.77req/s] [内存消耗：2,502.61kb] [文件加载：43]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/edit' => '',
+  'id' => '108',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->edit[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/edit.html [ array (
+  0 => 'username',
+  1 => 'brand',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000655s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000937s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000859s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:37:22+08:00 ] 0.0.0.0 GET /admin/taotu/index
+[ info ] localhost/admin/taotu/index [运行时间：0.047093s][吞吐率：21.23req/s] [内存消耗：2,595.51kb] [文件加载：47]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/taotu/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Taotu->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Taotu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/taotu/index.html [ array (
+  0 => 'username',
+  1 => 'taotus',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000761s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000929s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000650s ]
+---------------------------------------------------------------
+[ 2018-09-17T20:37:24+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.047613s][吞吐率：21.00req/s] [内存消耗：2,593.84kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/taotu/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T20:38:18+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.053525s][吞吐率：18.68req/s] [内存消耗：2,629.10kb] [文件加载：47]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000884s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000879s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000600s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:13:10+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.067902s][吞吐率：14.73req/s] [内存消耗：2,753.47kb] [文件加载：50]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:14:08+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.061973s][吞吐率：16.14req/s] [内存消耗：2,852.06kb] [文件加载：52]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000586s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001193s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000697s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:14:18+08:00 ] 0.0.0.0 GET /admin/brand/edit?id=108
+[ info ] localhost/admin/brand/edit?id=108 [运行时间：0.062863s][吞吐率：15.91req/s] [内存消耗：2,658.56kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/edit' => '',
+  'id' => '108',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->edit[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/edit.html [ array (
+  0 => 'username',
+  1 => 'brand',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000850s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001051s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000617s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:14:34+08:00 ] 0.0.0.0 POST /admin/brand/editsave
+[ info ] localhost/admin/brand/editsave [运行时间：0.061777s][吞吐率：16.19req/s] [内存消耗：2,801.48kb] [文件加载：50]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'editsave',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '1760',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarypM1wirsE7ihipVGg',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/edit?id=108',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/editsave' => '',
+  'id' => '108',
+  'brand_name' => '菠萝社',
+  'nick_name' => 'boluoshe',
+  'brand_des' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+  'cate' => 'jigou',
+  'cate_des' => '品牌大全',
+  'title' => '菠萝社',
+  'keyword' => '',
+  'description' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->editsave[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000627s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000827s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000511s ]
+[ sql ] [ SQL ] UPDATE `brand`  SET `brand_name`='菠萝社',`update_time`='2018-09-17 21:14:34'  WHERE  `id` = 108 [ RunTime:0.000711s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:14:35+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.043229s][吞吐率：23.13req/s] [内存消耗：2,596.68kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/editsave',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:14:43+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.053432s][吞吐率：18.72req/s] [内存消耗：2,596.68kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:15:02+08:00 ] 0.0.0.0 GET /admin/site/clear
+[ info ] localhost/admin/site/clear [运行时间：0.028651s][吞吐率：34.90req/s] [内存消耗：1,264.73kb] [文件加载：34]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'clear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/site/clear' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Site->clear[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Site.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:15:05+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.044644s][吞吐率：22.40req/s] [内存消耗：2,596.68kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:20:11+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.072503s][吞吐率：13.79req/s] [内存消耗：2,597.05kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:20:14+08:00 ] 0.0.0.0 GET /admin/site/clear
+[ info ] localhost/admin/site/clear [运行时间：0.041347s][吞吐率：24.19req/s] [内存消耗：1,465.80kb] [文件加载：36]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'clear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/site/clear' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Site->clear[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Site.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:20:17+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.056984s][吞吐率：17.55req/s] [内存消耗：2,852.06kb] [文件加载：52]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/site/clear',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000875s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001141s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000724s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:20:34+08:00 ] 0.0.0.0 GET /admin/brand/edit?id=108
+[ info ] localhost/admin/brand/edit?id=108 [运行时间：0.072998s][吞吐率：13.70req/s] [内存消耗：2,658.56kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/edit' => '',
+  'id' => '108',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->edit[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/edit.html [ array (
+  0 => 'username',
+  1 => 'brand',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000779s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001307s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000753s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:20:38+08:00 ] 0.0.0.0 POST /admin/brand/editsave
+[ info ] localhost/admin/brand/editsave [运行时间：0.057904s][吞吐率：17.27req/s] [内存消耗：2,665.30kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'editsave',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '1763',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryMoYWbFajLswqLJdj',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/edit?id=108',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/editsave' => '',
+  'id' => '108',
+  'brand_name' => '菠萝社111',
+  'nick_name' => 'boluoshe',
+  'brand_des' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+  'cate' => 'jigou',
+  'cate_des' => '品牌大全',
+  'title' => '菠萝社',
+  'keyword' => '',
+  'description' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->editsave[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000722s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000799s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000676s ]
+[ sql ] [ SQL ] UPDATE `brand`  SET `brand_name`='菠萝社111',`update_time`='2018-09-17 21:20:38'  WHERE  `id` = 108 [ RunTime:0.000668s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:20:39+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.048482s][吞吐率：20.63req/s] [内存消耗：2,596.68kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/editsave',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:20:41+08:00 ] 0.0.0.0 GET /admin/site/clear
+[ info ] localhost/admin/site/clear [运行时间：0.032438s][吞吐率：30.83req/s] [内存消耗：1,465.80kb] [文件加载：36]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'clear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/site/clear' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Site->clear[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Site.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:20:44+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.056760s][吞吐率：17.62req/s] [内存消耗：2,852.06kb] [文件加载：52]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/site/clear',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000819s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000914s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000686s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:21:43+08:00 ] 0.0.0.0 GET /admin/brand/edit?id=108
+[ info ] localhost/admin/brand/edit?id=108 [运行时间：0.057169s][吞吐率：17.49req/s] [内存消耗：2,658.56kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/edit' => '',
+  'id' => '108',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->edit[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/edit.html [ array (
+  0 => 'username',
+  1 => 'brand',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000610s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000844s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000652s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:21:47+08:00 ] 0.0.0.0 POST /admin/brand/editsave
+[ info ] localhost/admin/brand/editsave [运行时间：0.057159s][吞吐率：17.50req/s] [内存消耗：2,665.30kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'editsave',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '1760',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarydNPVWqbSElCH4yKB',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/edit?id=108',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/editsave' => '',
+  'id' => '108',
+  'brand_name' => '菠萝社',
+  'nick_name' => 'boluoshe',
+  'brand_des' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+  'cate' => 'jigou',
+  'cate_des' => '品牌大全',
+  'title' => '菠萝社',
+  'keyword' => '',
+  'description' => '由柳侑绮打造的国内首家实体写真集女神机构，致力于专业写真集策划发行节目制作及周边产业。波萝社（Bololi）寓意：大波，萝莉，童颜巨乳。',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->editsave[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000598s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000819s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 108 LIMIT 1 [ RunTime:0.000512s ]
+[ sql ] [ SQL ] UPDATE `brand`  SET `brand_name`='菠萝社',`update_time`='2018-09-17 21:21:47'  WHERE  `id` = 108 [ RunTime:0.000569s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:21:48+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.048397s][吞吐率：20.66req/s] [内存消耗：2,596.68kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/editsave',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:21:52+08:00 ] 0.0.0.0 GET /admin/site/clear
+[ info ] localhost/admin/site/clear [运行时间：0.027034s][吞吐率：36.99req/s] [内存消耗：1,465.93kb] [文件加载：36]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'clear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/site/clear' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Site->clear[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Site.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:21:53+08:00 ] 0.0.0.0 GET /admin/site/clear
+[ info ] localhost/admin/site/clear [运行时间：0.025582s][吞吐率：39.09req/s] [内存消耗：1,265.29kb] [文件加载：34]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'clear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/site/clear',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/site/clear' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Site->clear[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Site.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:21:56+08:00 ] 0.0.0.0 GET /admin/brand/index
+[ info ] localhost/admin/brand/index [运行时间：0.078666s][吞吐率：12.71req/s] [内存消耗：2,852.06kb] [文件加载：52]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/brand/editsave',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/brand/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/brand/index.html [ array (
+  0 => 'username',
+  1 => 'brands',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000614s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000881s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `brand` WHERE  `id` > 0 LIMIT 1 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` > 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001112s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:23:30+08:00 ] 0.0.0.0 GET /
+[ info ] localhost/ [运行时间：0.098118s][吞吐率：10.19req/s] [内存消耗：2,924.68kb] [文件加载：47]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'home',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Home->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Home.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/home/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'taotus',
+  4 => 'lunbo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000777s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.000956s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000632s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT ad1.id,brand_name,nick_name
+FROM brand AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM brand)-(SELECT MIN(id) FROM brand))+(SELECT MIN(id) FROM brand)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 7; [ RunTime:0.001099s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000677s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'jigou' LIMIT 6 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'meinvdalei' LIMIT 6 [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'diyufenbu' LIMIT 6 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'shencaitizheng' LIMIT 6 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'zhuozhuangleixing' LIMIT 6 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingchangjing' LIMIT 6 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'mingxingmote' LIMIT 6 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingleixing' LIMIT 6 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT ad1.id,title,update_time
+FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 20 [ RunTime:0.001248s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =498 [ RunTime:0.001295s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =499 [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =500 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =501 [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =502 [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =503 [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =504 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =505 [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =506 [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =507 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =508 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =509 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =510 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =511 [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =512 [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =513 [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =514 [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =515 [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =516 [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =517 [ RunTime:0.000499s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:23:33+08:00 ] 0.0.0.0 GET /brandlistall/jigou
+[ info ] localhost/brandlistall/jigou [运行时间：0.066749s][吞吐率：14.98req/s] [内存消耗：2,764.57kb] [文件加载：50]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'listall',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/brandlistall/jigou' => '',
+  'cate' => 'jigou',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Brand->listall[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Brand.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/brand/listall.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'cate',
+  4 => 'cate_name',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000634s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.000768s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000827s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'jigou' [ RunTime:0.000608s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:24:07+08:00 ] 0.0.0.0 GET /brand/3
+[ info ] localhost/brand/3 [运行时间：0.059465s][吞吐率：16.82req/s] [内存消耗：2,501.39kb] [文件加载：47]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/brandlistall/jigou',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/brand/3' => '',
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Brand.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000612s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001712s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000806s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000790s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000491s ]
+[ error ] [8]Undefined property: think\db\Query::$cate[/Users/zhangxiang/Documents/51rosi/application/index/controller/Brand.php:30]
+---------------------------------------------------------------
+[ 2018-09-17T21:24:39+08:00 ] 0.0.0.0 GET /brandlistall/jigou
+[ info ] localhost/brandlistall/jigou [运行时间：0.044901s][吞吐率：22.27req/s] [内存消耗：2,603.89kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'listall',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/brandlistall/jigou' => '',
+  'cate' => 'jigou',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Brand->listall[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Brand.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/brand/listall.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'cate',
+  4 => 'cate_name',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000658s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000725s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000333s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:24:42+08:00 ] 0.0.0.0 GET /brand/1
+[ info ] localhost/brand/1 [运行时间：0.122098s][吞吐率：8.19req/s] [内存消耗：3,030.37kb] [文件加载：56]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/brandlistall/jigou',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/brand/1' => '',
+  'id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Brand.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/brand/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brand',
+  3 => 'brands',
+  4 => 'count',
+  5 => 'taotus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000628s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001093s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000874s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001081s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.000898s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `tags` LIKE '%爱蜜社%' LIMIT 1 [ RunTime:0.001797s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `tags` LIKE '%爱蜜社%' LIMIT 0,15 [ RunTime:0.001601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.000996s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 59 [ RunTime:0.001347s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 61 [ RunTime:0.000927s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 87 [ RunTime:0.001548s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 205 [ RunTime:0.001336s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 337 [ RunTime:0.001316s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 422 [ RunTime:0.001095s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 476 [ RunTime:0.001395s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 672 [ RunTime:0.001430s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 688 [ RunTime:0.001031s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 691 [ RunTime:0.001241s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 772 [ RunTime:0.000972s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 784 [ RunTime:0.000933s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1181 [ RunTime:0.001495s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:25:44+08:00 ] 0.0.0.0 GET /brandlistall/jigou
+[ info ] localhost/brandlistall/jigou [运行时间：0.049319s][吞吐率：20.28req/s] [内存消耗：2,604.89kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'listall',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/brandlistall/jigou' => '',
+  'cate' => 'jigou',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Brand->listall[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Brand.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/brand/listall.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'cate',
+  4 => 'cate_name',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000616s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.000952s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000335s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:25:46+08:00 ] 0.0.0.0 GET /brand/3
+[ info ] localhost/brand/3 [运行时间：0.087727s][吞吐率：11.40req/s] [内存消耗：2,809.83kb] [文件加载：54]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/brandlistall/jigou',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/brand/3' => '',
+  'id' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Brand->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Brand.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/brand/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brand',
+  3 => 'brands',
+  4 => 'count',
+  5 => 'taotus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000738s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001254s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000651s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000864s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.001058s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `taotu` WHERE  `tags` LIKE '%头条女神%' LIMIT 1 [ RunTime:0.002255s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `tags` LIKE '%头条女神%' LIMIT 0,15 [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.000952s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 90 [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 98 [ RunTime:0.000779s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 108 [ RunTime:0.000742s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 140 [ RunTime:0.000856s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 153 [ RunTime:0.000884s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 154 [ RunTime:0.000759s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 191 [ RunTime:0.001712s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 210 [ RunTime:0.001149s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 211 [ RunTime:0.000755s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 221 [ RunTime:0.000992s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 223 [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 225 [ RunTime:0.000888s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 227 [ RunTime:0.000629s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 235 [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 240 [ RunTime:0.000712s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:26:28+08:00 ] 0.0.0.0 GET /brand/newest
+[ info ] localhost/brand/newest [运行时间：0.062633s][吞吐率：15.97req/s] [内存消耗：2,843.98kb] [文件加载：53]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'newest',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/brandlistall/jigou',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/brand/newest' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Brand->newest[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Brand.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/brand/newest.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000588s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.000950s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.001034s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000885s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `id` > 0 LIMIT 0,10 [ RunTime:0.000662s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:28:20+08:00 ] 0.0.0.0 GET /
+[ info ] localhost/ [运行时间：0.108916s][吞吐率：9.18req/s] [内存消耗：2,788.18kb] [文件加载：48]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'home',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Home->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Home.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/home/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brands',
+  3 => 'taotus',
+  4 => 'lunbo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000776s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.002122s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.003370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000935s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT ad1.id,brand_name,nick_name
+FROM brand AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM brand)-(SELECT MIN(id) FROM brand))+(SELECT MIN(id) FROM brand)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 7; [ RunTime:0.001051s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'jigou' LIMIT 6 [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'meinvdalei' LIMIT 6 [ RunTime:0.001418s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'diyufenbu' LIMIT 6 [ RunTime:0.000634s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'shencaitizheng' LIMIT 6 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'zhuozhuangleixing' LIMIT 6 [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingchangjing' LIMIT 6 [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'mingxingmote' LIMIT 6 [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `cate` = 'tedingleixing' LIMIT 6 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SELECT ad1.id,title,update_time
+FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 20 [ RunTime:0.001152s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1701 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1702 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1703 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1704 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1705 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1706 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1707 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1708 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1709 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1710 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1711 [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1712 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1713 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1714 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1715 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1716 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1717 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1718 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1719 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT COUNT(id) as num FROM photo WHERE taotu_id =1720 [ RunTime:0.000382s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:30:02+08:00 ] 0.0.0.0 GET /taotu/1701
+[ info ] localhost/taotu/1701 [运行时间：0.074298s][吞吐率：13.46req/s] [内存消耗：2,956.20kb] [文件加载：56]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/taotu/1701' => '',
+  'id' => '1701',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Taotu->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Taotu.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/taotu/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brand',
+  3 => 'brands',
+  4 => 'photos',
+  5 => 'taotus',
+  6 => 'taotu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000764s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001618s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000828s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT ad1.id,title,update_time
+FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 9 [ RunTime:0.001304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` = 1701 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `brand` [ RunTime:0.001483s ]
+[ sql ] [ SQL ] SELECT * FROM `brand` WHERE  `brand_name` IN ('明星','短发','短裙') [ RunTime:0.000961s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.000872s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `photo` WHERE  `taotu_id` = 1701 LIMIT 1 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1701 LIMIT 0,1 [ RunTime:0.000398s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:30:16+08:00 ] 0.0.0.0 GET /taotu/1701
+[ info ] localhost/taotu/1701 [运行时间：0.055887s][吞吐率：17.89req/s] [内存消耗：2,727.80kb] [文件加载：54]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'taotu',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/taotu/1701' => '',
+  'id' => '1701',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Taotu->index[ /Users/zhangxiang/Documents/51rosi/application/index/controller/Taotu.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/index/view/taotu/index.html [ array (
+  0 => 'links',
+  1 => 'site',
+  2 => 'brand',
+  3 => 'brands',
+  4 => 'photos',
+  5 => 'taotus',
+  6 => 'taotu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000799s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.001222s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000787s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `linkship` [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT * FROM `linkship` [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT ad1.id,title,update_time
+FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
+ AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 9 [ RunTime:0.001299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `taotu` [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SELECT * FROM `taotu` WHERE  `id` = 1701 LIMIT 1 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `photo` [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `photo` WHERE  `taotu_id` = 1701 LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT * FROM `photo` WHERE  `taotu_id` = 1701 LIMIT 0,1 [ RunTime:0.000433s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:31:18+08:00 ] 0.0.0.0 GET /admin/login/login
+[ info ] localhost/admin/login/login [运行时间：0.021344s][吞吐率：46.85req/s] [内存消耗：1,040.94kb] [文件加载：28]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:31:22+08:00 ] 0.0.0.0 GET /admin
+[ info ] localhost/admin [运行时间：0.048201s][吞吐率：20.75req/s] [内存消耗：2,639.93kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Site->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Site.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/site/index.html [ array (
+  0 => 'username',
+  1 => 'site',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000591s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.000917s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000601s ]
+---------------------------------------------------------------
+[ 2018-09-17T21:31:23+08:00 ] 0.0.0.0 GET /admin/site/clear
+[ info ] localhost/admin/site/clear [运行时间：0.038851s][吞吐率：25.74req/s] [内存消耗：1,465.56kb] [文件加载：36]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'clear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin/site/clear' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Site->clear[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Site.php ]
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'username',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'url',
+  5 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-17T21:31:27+08:00 ] 0.0.0.0 GET /admin
+[ info ] localhost/admin [运行时间：0.048329s][吞吐率：20.69req/s] [内存消耗：2,640.54kb] [文件加载：45]
+[ info ] [ LANG ] /Users/zhangxiang/Documents/51rosi/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'site',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/admin/site/clear',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-81630721=5596d9c5-890b-40a8-8e69-ea1258181b15; pgv_pvi=6935796736; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1535261875,1535707842,1535773397,1535868977; PHPSESSID=d0vuoqghehlgenlg6mf1bg8ds7',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Site->index[ /Users/zhangxiang/Documents/51rosi/application/admin/controller/Site.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/zhangxiang/Documents/51rosi/application/admin/view/site/index.html [ array (
+  0 => 'username',
+  1 => 'site',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000856s ] mysql:host=127.0.0.1;dbname=muxi_photo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `site` [ RunTime:0.000867s ]
+[ sql ] [ SQL ] SELECT * FROM `site` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000520s ]

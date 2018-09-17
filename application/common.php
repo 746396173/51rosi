@@ -63,3 +63,26 @@ function img_process($file,$width,$height,$path){
     $image = think\Image::open($file);
     $image->thumb($width, $height,think\Image::THUMB_FIXED)->save($path);
 }
+
+function delete_dir_file($dir_name)
+{
+    $result = false;
+    if (is_dir($dir_name)) {
+        if ($handle = opendir($dir_name)) {
+            while (false !== ($item = readdir($handle))) {
+                if ($item != '.' && $item != '..') {
+                    if (is_dir($dir_name . DIRECTORY_SEPARATOR . $item)) {
+                        delete_dir_file($dir_name . DIRECTORY_SEPARATOR . $item);
+                    } else {
+                        unlink($dir_name . DIRECTORY_SEPARATOR . $item);
+                    }
+                }
+            }
+            closedir($handle);
+            if (rmdir($dir_name)) {
+                $result = true;
+            }
+        }
+    }
+    return $result;
+}

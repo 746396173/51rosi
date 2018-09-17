@@ -16,7 +16,8 @@ class Brand extends BaseAdmin
 {
     public function index()
     {
-        $brands = BrandModel::where('id', '>', 0)->order('id', 'desc')
+        $brands = BrandModel::where('id', '>', 0)
+            ->order('id', 'desc')
             ->paginate(10, false, [
                 'query' => request()->param(),
                 'type' => 'util\AdminPage',
