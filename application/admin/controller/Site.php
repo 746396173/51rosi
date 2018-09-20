@@ -85,7 +85,7 @@ class Site extends BaseAdmin
         $id = $request->post('id');
         $username = $request->post('username');
         $password = $request->post('password');
-        $user = AdminModel::get($id);
+        $user = AdminModel::get($id)->cache(true);
         $user->username = $username;
         if (!empty($password)){
             $user->password = md5($password);

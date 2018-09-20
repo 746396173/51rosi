@@ -17,14 +17,14 @@ class Home extends Base
         $lunbo = Db::query("SELECT ad1.id,brand_name,nick_name
 FROM brand AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM brand)-(SELECT MIN(id) FROM brand))+(SELECT MIN(id) FROM brand)) AS id)
  AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 7;");
-        $brands['jigou'] = BrandModel::where('cate','=','jigou')->cache(true)->limit(6)->select();
-        $brands['meinvdalei'] = BrandModel::where('cate','=','meinvdalei')->cache(true)->limit(6)->select();
-        $brands['diyufenbu'] = BrandModel::where('cate','=','diyufenbu')->cache(true)->limit(6)->select();
-        $brands['shencaitizheng'] = BrandModel::where('cate','=','shencaitizheng')->cache(true)->limit(6)->select();
-        $brands['zhuozhuangleixing'] = BrandModel::where('cate','=','zhuozhuangleixing')->cache(true)->limit(6)->select();
-        $brands['tedingchangjing'] = BrandModel::where('cate','=','tedingchangjing')->cache(true)->limit(6)->select();
-        $brands['mingxingmote'] = BrandModel::where('cate','=','mingxingmote')->cache(true)->limit(6)->select();
-        $brands['tedingleixing'] = BrandModel::where('cate','=','tedingleixing')->cache(true)->limit(6)->select();
+        $brands['jigou'] = BrandModel::where('cate','=','jigou')->cache(true,600)->limit(6)->select();
+        $brands['meinvdalei'] = BrandModel::where('cate','=','meinvdalei')->cache(true,600)->limit(6)->select();
+        $brands['diyufenbu'] = BrandModel::where('cate','=','diyufenbu')->cache(true,600)->limit(6)->select();
+        $brands['shencaitizheng'] = BrandModel::where('cate','=','shencaitizheng')->cache(true,600)->limit(6)->select();
+        $brands['zhuozhuangleixing'] = BrandModel::where('cate','=','zhuozhuangleixing')->cache(true,600)->limit(6)->select();
+        $brands['tedingchangjing'] = BrandModel::where('cate','=','tedingchangjing')->cache(true,600)->limit(6)->select();
+        $brands['mingxingmote'] = BrandModel::where('cate','=','mingxingmote')->cache(true,600)->limit(6)->select();
+        $brands['tedingleixing'] = BrandModel::where('cate','=','tedingleixing')->cache(true,600)->limit(6)->select();
         foreach ($brands as $key => $cate){
             $cate['cate'] = $key;
         }

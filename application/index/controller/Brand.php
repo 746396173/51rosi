@@ -10,7 +10,7 @@ class Brand extends Base
 {
     public function listall($cate='jigou')
     {
-        $brands = BrandModel::where('cate','=',$cate)->cache(true)->select();
+        $brands = BrandModel::where('cate','=',$cate)->cache(true,600)->select();
         $this->assign('brands', $brands);
         $this->assign('cate',$cate);
         $this->assign('cate_name',current($brands)->getCateDes());
@@ -24,7 +24,7 @@ class Brand extends Base
     public function index($id)
     {
         $brand = BrandModel::get($id);
-        $brands = BrandModel::where('cate','=',$brand->cate)->cache(true)->select();//查出相同分类的所有套图
+        $brands = BrandModel::where('cate','=',$brand->cate)->cache(true,600)->select();//查出相同分类的所有套图
         if (isMobile()){
             $page = 'Mpage'; //选择分页设置
         }else{
@@ -32,7 +32,7 @@ class Brand extends Base
         }
         //查出tags里包含brand的cate_des的所有套图
         $taotus = TaotuModel::where('tags','like',"%$brand->brand_name%")
-            ->cache(true)
+            ->cache(true,600)
             ->paginate(15,false,[
             'query'=>request()->param(),
             'type'      => 'util\\'.$page,
@@ -59,7 +59,7 @@ class Brand extends Base
             $page = 'Page2';
         }
         $brands = BrandModel::where('id','>',0)
-            ->cache(true)
+            ->cache(true,600)
             ->paginate(10,false,[
             'query'=>request()->param(),
             'type'      => 'util\\'.$page,

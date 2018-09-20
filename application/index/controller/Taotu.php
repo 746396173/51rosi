@@ -23,7 +23,7 @@ FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELE
  AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 9");
         $taotu = TaotuModel::get($id); //TaotuModel::get($id);
         $tags = explode("|",$taotu->tags);
-        $brands = BrandModel::where('brand_name','in',$tags)->cache(true)->select();
+        $brands = BrandModel::where('brand_name','in',$tags)->cache(true,600)->select();
         $brand = $brands[array_rand($brands,1)];
         if (isMobile()){
             $page = 'Mpage'; //选择分页设置
@@ -31,7 +31,7 @@ FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELE
             $page = 'Page2';
         }
         $photos = PhotoModel::where('taotu_id',$id)
-            ->cache(true)
+            ->cache(true,600)
             ->paginate(1,false,[ //套图分页
             'query'=>request()->param(),
             'type'      => 'util\\'.$page,
@@ -53,7 +53,7 @@ FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELE
     public function newest(){
         //$site = SiteModel::get(0);
         $taotus = TaotuModel::where('id','>',0)
-            ->cache(true)
+            ->cache(true,600)
             ->order('id','desc')->limit(100)->select();
         foreach ($taotus as $taotu){
             $taotu->count = count($taotu->photos);

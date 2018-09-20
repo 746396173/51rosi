@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="63eec8f3-08d6-43f7-8568-b4abe0a0beab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/controller/Site.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Base.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Base.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Brand.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Brand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Taotu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Taotu.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,34 +22,36 @@
     <session id="-2022470859">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="htaccess" value="1" />
-          <entry key="html" value="3" />
-          <entry key="php" value="14" />
+          <entry key="html" value="8" />
+          <entry key="php" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="3" />
-          <entry key="PHP" value="14" />
+          <entry key="HTML" value="8" />
+          <entry key="PHP" value="15" />
           <entry key="htaccess" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="26" />
-          <entry key="php" value="210" />
+          <entry key="html" value="39" />
+          <entry key="php" value="314" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="26" />
-          <entry key="PHP" value="210" />
+          <entry key="HTML" value="39" />
+          <entry key="PHP" value="314" />
         </counts>
       </usages-collector>
     </session>
@@ -54,52 +61,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/controller/Site.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
+            <state relative-caret-position="318">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="e#121#159#0#PHP" expanded="true" />
-                <element signature="e#256#590#0#PHP" />
-                <element signature="e#596#1212#0#PHP" />
-                <element signature="e#1218#2166#0#PHP" />
-                <element signature="e#2172#2420#0#PHP" />
-                <element signature="e#2426#2934#0#PHP" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/controller/Brand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/controller/Home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/controller/Taotu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/index/view/home/mindex.html">
+        <entry file="file://$PROJECT_DIR$/application/index/controller/Base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state relative-caret-position="238">
+              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -115,7 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ggtleft</find>
       <find>title</find>
       <find>nick_nm</find>
       <find>$brand</find>
@@ -145,6 +119,7 @@
       <find>am-gallery</find>
       <find>taotus</find>
       <find>id=&quot;hits</find>
+      <find>cache</find>
     </findStrings>
     <replaceStrings>
       <replace>/public/static/img</replace>
@@ -165,8 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/index/view/taotu/mnewest.html" />
-        <option value="$PROJECT_DIR$/application/index/view/brand/newest.html" />
         <option value="$PROJECT_DIR$/public/static/css/amazeui.min.css" />
         <option value="$PROJECT_DIR$/application/admin/view/crawl/photoIndex.html" />
         <option value="$PROJECT_DIR$/application/admin/view/crawl/taotuIndex.html" />
@@ -185,7 +158,6 @@
         <option value="$PROJECT_DIR$/application/index/view/taotu/newest.html" />
         <option value="$PROJECT_DIR$/application/admin/controller/Photo.php" />
         <option value="$PROJECT_DIR$/application/admin/view/photo/index.html" />
-        <option value="$PROJECT_DIR$/application/index/view/home/mindex.html" />
         <option value="$PROJECT_DIR$/application/index/view/taotu/index.html" />
         <option value="$PROJECT_DIR$/public/static/css/main.css" />
         <option value="$PROJECT_DIR$/application/index/view/search/index.html" />
@@ -196,7 +168,6 @@
         <option value="$PROJECT_DIR$/application/admin/view/brand/add.html" />
         <option value="$PROJECT_DIR$/application/admin/view/linkship/add.html" />
         <option value="$PROJECT_DIR$/application/index/view/pub/foot.html" />
-        <option value="$PROJECT_DIR$/application/index/controller/Base.php" />
         <option value="$PROJECT_DIR$/application/admin/controller/Linkship.php" />
         <option value="$PROJECT_DIR$/application/admin/view/linkship/edit.html" />
         <option value="$PROJECT_DIR$/application/admin/controllersitemap.xml" />
@@ -212,10 +183,14 @@
         <option value="$PROJECT_DIR$/application/common.php" />
         <option value="$PROJECT_DIR$/application/admin/view/pub/nav.html" />
         <option value="$PROJECT_DIR$/application/admin/controller/Brand.php" />
-        <option value="$PROJECT_DIR$/application/admin/controller/Site.php" />
-        <option value="$PROJECT_DIR$/application/index/controller/Brand.php" />
-        <option value="$PROJECT_DIR$/application/index/controller/Home.php" />
+        <option value="$PROJECT_DIR$/application/index/view/home/mindex.html" />
+        <option value="$PROJECT_DIR$/application/index/view/brand/mnewest.html" />
+        <option value="$PROJECT_DIR$/application/index/view/taotu/mnewest.html" />
         <option value="$PROJECT_DIR$/application/index/controller/Taotu.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Home.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Brand.php" />
+        <option value="$PROJECT_DIR$/application/admin/controller/Site.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Base.php" />
       </list>
     </option>
   </component>
@@ -257,7 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,20 +255,13 @@
               <item name="51rosi" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="51rosi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="51rosi" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -456,18 +423,19 @@
       <workItem from="1536287615456" duration="775000" />
       <workItem from="1536290185188" duration="1606000" />
       <workItem from="1536907769059" duration="1912000" />
-      <workItem from="1537186824949" duration="3618000" />
+      <workItem from="1537186824949" duration="4001000" />
+      <workItem from="1537450625472" duration="623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332550000" />
+    <option name="totallyTimeSpent" value="333556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18820679" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19063005" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -516,27 +484,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/admin/view/site/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/taotu/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="64" column="26" selection-start-line="57" selection-start-column="20" selection-end-line="64" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/taotu/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="85" selection-start-line="29" selection-start-column="85" selection-end-line="29" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/home/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1116">
@@ -555,13 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/taotu/mnewest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="5" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -651,13 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/brand/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -717,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/taotu/mindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -778,15 +704,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/temp/773c3e438f4cf39b62f692af99e9abb1.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/cache/99/946c517d3c36d438ca4fe76201fba0.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/cache/c0/ce3ec85408971300499f534bc2d7fe.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/temp/773c3e438f4cf39b62f692af99e9abb1.php" />
+    <entry file="file://$PROJECT_DIR$/runtime/cache/99/946c517d3c36d438ca4fe76201fba0.php" />
+    <entry file="file://$PROJECT_DIR$/runtime/cache/c0/ce3ec85408971300499f534bc2d7fe.php" />
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Brand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -801,46 +721,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/Site.php">
+    <entry file="file://$PROJECT_DIR$/application/index/view/brand/mindex.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/brand/mlistall.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/brand/mnewest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
-          <folding>
-            <element signature="e#121#159#0#PHP" expanded="true" />
-            <element signature="e#256#590#0#PHP" />
-            <element signature="e#596#1212#0#PHP" />
-            <element signature="e#1218#2166#0#PHP" />
-            <element signature="e#2172#2420#0#PHP" />
-            <element signature="e#2426#2934#0#PHP" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Brand.php">
+    <entry file="file://$PROJECT_DIR$/application/index/view/taotu/mnewest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="53">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Home.php">
+    <entry file="file://$PROJECT_DIR$/application/index/view/taotu/mindex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Taotu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="153">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/home/mindex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="187">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Taotu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="25" column="67" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="26" column="87" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Brand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/controller/Site.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#121#159#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
         </state>
       </provider>
     </entry>
