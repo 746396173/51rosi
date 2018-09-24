@@ -99,7 +99,7 @@ class Site extends BaseAdmin
     }
 
     public function clear(){
-        if (delete_dir_file(RUNTIME_PATH . 'cache/') && delete_dir_file(	RUNTIME_PATH . 'temp/')) {
+        if (clearCache()) {
             $this->success('清除缓存成功');
         } else {
             $this->error('清除缓存失败');
