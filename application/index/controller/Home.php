@@ -8,6 +8,7 @@
 
 namespace app\index\controller;
 use app\index\model\Brand as BrandModel;
+use think\Cache;
 use think\Db;
 
 class Home extends Base
@@ -28,11 +29,20 @@ FROM brand AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM brand)-(SELE
         foreach ($brands as $key => $cate){
             $cate['cate'] = $key;
         }
-        $taotus = Db::query("SELECT ad1.id,title,update_time
+        $taotus = Cache::get('index_taotu');
+        if (!$taotus){
+            $taotus = Db::query("SELECT ad1.id,title,update_time
 FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
  AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 20");
+            Cache::set('index_taotu',$taotus,60);
+        }
+
         foreach ($taotus as &$taotu) {
-            $list = Db::query("SELECT COUNT(id) as num FROM photo WHERE taotu_id =".$taotu['id'])[0];
+            $list = Cache::get("taotu_id".$taotu['id']);
+            if (!$list){
+                $list = Db::query("SELECT COUNT(id) as num FROM photo WHERE taotu_id =".$taotu['id'])[0];
+                Cache::set("taotu_id".$taotu['id'],$list,600);
+            }
             foreach ($list as $key=>$value) {
                 $taotu['count'] = $value;
             }

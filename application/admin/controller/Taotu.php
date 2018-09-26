@@ -58,7 +58,7 @@ class Taotu extends BaseAdmin
                 ->move($dir,'thumb.jpg');
         }
         if($result){
-            clearCache();//清除查询缓存
+
             $this->success('编辑成功','index','',1);
         } else {
             if ($info){
@@ -100,7 +100,7 @@ class Taotu extends BaseAdmin
 //                ->move($dir,'thumb.jpg');
         }
         if($result){
-            clearCache();//清除查询缓存
+
             $this->success('添加成功','index','',1);
         } else {
             //错误页面的默认跳转页面是返回前一页，通常不需要设置
@@ -115,7 +115,7 @@ class Taotu extends BaseAdmin
         }
         $result = $taotu->delete();
         if($result){
-            clearCache();//清除查询缓存
+
             $this->success('删除成功','index','',1);
         } else {
             //错误页面的默认跳转页面是返回前一页，通常不需要设置

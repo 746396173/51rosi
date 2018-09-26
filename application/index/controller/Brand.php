@@ -32,7 +32,7 @@ class Brand extends Base
         }
         //查出tags里包含brand的cate_des的所有套图
         $taotus = TaotuModel::where('tags','like',"%$brand->brand_name%")
-            ->cache(true,600)
+            ->cache(true,60)
             ->paginate(15,false,[
             'query'=>request()->param(),
             'type'      => 'util\\'.$page,

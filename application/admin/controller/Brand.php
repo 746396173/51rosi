@@ -87,7 +87,7 @@ class Brand extends BaseAdmin
             }
 
             if ($result) {
-                clearCache();//清除查询缓存
+
                 $this->success('修改成功', 'index', '', 1);
             } else {
                 $this->error('修改失败');
@@ -105,7 +105,7 @@ class Brand extends BaseAdmin
         }
         $result = $brand->delete();
         if ($result) {
-            clearCache();//清除查询缓存
+
             $this->success('删除成功', 'index', '', 1);
         } else {
             $this->error('删除失败');
@@ -159,7 +159,7 @@ class Brand extends BaseAdmin
             }
 
             if ($result) {
-                clearCache();//清除查询缓存
+
                 if ($banner_info && $mbanner_info && $thumb_info) {
                     $this->success('添加成功', 'index', '', 1);
                 } else {

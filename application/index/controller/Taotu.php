@@ -11,19 +11,23 @@ use app\index\model\Photo;
 use app\index\model\Taotu as TaotuModel;
 use app\index\model\Brand as BrandModel;
 use app\index\model\Photo as PhotoModel;
+use think\Cache;
 use think\Db;
 
 
 class Taotu extends Base
 {
     public function index($id){
-        //$site = SiteModel::get(0);
-        $taotus = Db::query("SELECT ad1.id,title,update_time
+        $taotus = Cache::get('relate_taotu');
+        if (!$taotus){
+            $taotus = Db::query("SELECT ad1.id,title,update_time
 FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELECT MIN(id) FROM taotu))+(SELECT MIN(id) FROM taotu)) AS id)
  AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 9");
-        $taotu = TaotuModel::get($id); //TaotuModel::get($id);
+            Cache::set('relate_taotu',$taotus,60);
+        }
+        $taotu = TaotuModel::get($id)->cache(true,600)->find();
         $tags = explode("|",$taotu->tags);
-        $brands = BrandModel::where('brand_name','in',$tags)->cache(true,600)->select();
+        $brands = BrandModel::where('brand_name','in',$tags)->cache(true,60)->select();
         $brand = $brands[array_rand($brands,1)];
         if (isMobile()){
             $page = 'Mpage'; //选择分页设置
@@ -53,7 +57,7 @@ FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELE
     public function newest(){
         //$site = SiteModel::get(0);
         $taotus = TaotuModel::where('id','>',0)
-            ->cache(true,600)
+            ->cache(true,60)
             ->order('id','desc')->limit(100)->select();
         foreach ($taotus as $taotu){
             $taotu->count = count($taotu->photos);
