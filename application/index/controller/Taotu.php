@@ -25,7 +25,7 @@ FROM taotu AS ad1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM taotu)-(SELE
  AS t2 WHERE ad1.id >= t2.id ORDER BY ad1.id LIMIT 9");
             Cache::set('relate_taotu',$taotus,60);
         }
-        $taotu = TaotuModel::get($id)->cache(true,600)->find();
+        $taotu = TaotuModel::get($id);
         $tags = explode("|",$taotu->tags);
         $brands = BrandModel::where('brand_name','in',$tags)->cache(true,60)->select();
         $brand = $brands[array_rand($brands,1)];
