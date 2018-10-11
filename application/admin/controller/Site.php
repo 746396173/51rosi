@@ -10,8 +10,8 @@ namespace app\admin\controller;
 
 use app\index\model\Site as SiteModel;
 use app\admin\model\Admin as AdminModel;
+use think\Cache;
 use think\Request;
-use think\Env;
 
 class Site extends BaseAdmin
 {
@@ -99,10 +99,13 @@ class Site extends BaseAdmin
     }
 
     public function clear(){
-        if (clearCache()) {
-            $this->success('清除缓存成功');
-        } else {
-            $this->error('清除缓存失败');
-        }
+//        if (clearCache()) {
+//            $this->success('清除缓存成功');
+//        } else {
+//            $this->error('清除缓存失败');
+//        }
+        Cache::clear();
+        clearCache();
+        $this->success('清除缓存成功');
     }
 }

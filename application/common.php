@@ -88,5 +88,5 @@ function delete_dir_file($dir_name)
 }
 
 function clearCache(){
-    return delete_dir_file(RUNTIME_PATH . 'cache/') && delete_dir_file(RUNTIME_PATH . 'temp/');
+    delete_dir_file(RUNTIME_PATH . 'temp/');
 }
