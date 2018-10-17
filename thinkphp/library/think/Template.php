@@ -51,13 +51,6 @@ class Template
         'cache_id'           => '', // 模板缓存ID
         'tpl_replace_string' => [],
         'tpl_var_identify'   => 'array', // .语法变量识别，array|object|'', 为空时自动识别
-        'tpl_replace_string'  =>  [
-            '__STATIC__'=>'/public/static',
-            '__JS__' => '/public/static/js',
-            '__IMG__' => '/public/static/img',
-            '__CSS__' => '/public/static/css',
-            '__UPLOAD__' => '/public/static/upload'
-        ]
     ];
 
     private $literal     = [];

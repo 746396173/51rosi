@@ -66,28 +66,21 @@ class Brand extends BaseAdmin
                 mkdir($dir, 0777, true);
             }
             $banner = $request->file('banner');
-            $banner_info = null;
             if ($banner) {
-                $banner_info = $banner->validate(['size' => 1024000, 'ext' => 'jpg'])
-                    ->move($dir, 'banner.jpg');
+                img_process($banner,'1250','420',$dir.'/banner.jpg');
             }
 
             $mbanner = $request->file('mbanner');
-            $mbanner_info = null;
             if ($mbanner) {
-                $mbanner_info = $mbanner->validate(['size' => 1024000, 'ext' => 'jpg'])
-                    ->move($dir, 'mbanner.jpg');
+                img_process($mbanner,'360','185',$dir.'/mbanner.jpg');
             }
 
             $thumb = $request->file('thumb');
-            $thumb_info = null;
             if ($thumb) {
-                $thumb_info = $thumb->validate(['size' => 1024000, 'ext' => 'jpg'])
-                    ->move($dir, 'thumb.jpg');
+                img_process($thumb,'196','265',$dir.'/thumb.jpg');
             }
 
             if ($result) {
-
                 $this->success('修改成功', 'index', '', 1);
             } else {
                 $this->error('修改失败');
@@ -138,6 +131,7 @@ class Brand extends BaseAdmin
                 mkdir($dir, 0777, true);
             }
             $banner = $request->file('banner');
+            $pic = Image::
             $banner_info = null;
             if ($banner) {
                 $banner_info = $banner->validate(['size' => 1024000, 'ext' => 'jpg'])
